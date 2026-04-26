@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ing. Marcela Valverde — Consultora en Automatización & Análisis</title>
+<title>Ing. Marcela Valverde — MVImpulsa · Automatización para tu negocio</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -17,193 +17,101 @@
     --gold: #D97706;
     --white: #FFFFFF;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    color: var(--ink);
-    background: var(--white);
-    overflow-x: hidden;
-  }
+  body { font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--white); overflow-x: hidden; }
 
   /* NAV */
   nav {
     position: fixed; top: 0; width: 100%; z-index: 100;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
-    padding: 16px 40px;
-    display: flex; justify-content: space-between; align-items: center;
+    padding: 16px 40px; display: flex; justify-content: space-between; align-items: center;
   }
-  .nav-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem; font-weight: 700;
-    color: var(--ink); letter-spacing: -0.3px;
-  }
+  .nav-brand { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--ink); }
   .nav-links { display: flex; gap: 32px; list-style: none; }
-  .nav-links a {
-    font-size: 0.875rem; font-weight: 500;
-    color: var(--slate); text-decoration: none;
-    transition: color 0.2s;
-  }
+  .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--slate); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--accent); }
-  .nav-cta {
-    background: var(--accent); color: white;
-    padding: 10px 22px; border-radius: 6px;
-    font-size: 0.875rem; font-weight: 600;
-    text-decoration: none; transition: background 0.2s;
-  }
+  .nav-cta { background: var(--accent); color: white; padding: 10px 22px; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
   .nav-cta:hover { background: var(--accent2); }
 
   /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: grid; grid-template-columns: 1fr 1fr;
-    padding-top: 72px;
-  }
+  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 72px; }
   .hero-left {
-    background: var(--ink);
-    padding: 80px 60px;
+    background: var(--ink); padding: 80px 60px;
     display: flex; flex-direction: column; justify-content: center;
     position: relative; overflow: hidden;
   }
   .hero-left::before {
-    content: '';
-    position: absolute; top: -100px; right: -100px;
+    content: ''; position: absolute; top: -100px; right: -100px;
     width: 400px; height: 400px;
     background: radial-gradient(circle, rgba(15,118,110,0.3) 0%, transparent 70%);
     pointer-events: none;
   }
   .hero-tag {
-    display: inline-block;
-    background: rgba(15,118,110,0.2);
-    color: #5EEAD4;
-    font-size: 0.75rem; font-weight: 600;
-    letter-spacing: 2px; text-transform: uppercase;
-    padding: 6px 14px; border-radius: 4px;
-    margin-bottom: 28px; width: fit-content;
+    display: inline-block; background: rgba(15,118,110,0.2); color: #5EEAD4;
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 4px; margin-bottom: 28px; width: fit-content;
   }
-  .hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 4vw, 3.8rem);
-    font-weight: 900; line-height: 1.1;
-    color: white; margin-bottom: 28px;
-  }
+  .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 900; line-height: 1.1; color: white; margin-bottom: 28px; }
   .hero-title span { color: #5EEAD4; }
-  .hero-subtitle {
-    font-size: 1.1rem; line-height: 1.7;
-    color: #9CA3AF; margin-bottom: 44px;
-    max-width: 460px;
-  }
+  .hero-subtitle { font-size: 1.05rem; line-height: 1.8; color: #9CA3AF; margin-bottom: 44px; max-width: 460px; }
   .hero-subtitle strong { color: #E5E7EB; }
   .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-  .btn-primary {
-    background: var(--accent); color: white;
-    padding: 14px 30px; border-radius: 8px;
-    font-weight: 600; font-size: 0.95rem;
-    text-decoration: none; transition: all 0.2s;
-    display: inline-block;
-  }
+  .btn-primary { background: var(--accent); color: white; padding: 14px 30px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; display: inline-block; }
   .btn-primary:hover { background: #0D9488; transform: translateY(-1px); }
-  .btn-secondary {
-    background: transparent; color: white;
-    padding: 14px 30px; border-radius: 8px;
-    font-weight: 500; font-size: 0.95rem;
-    text-decoration: none; border: 1px solid rgba(255,255,255,0.25);
-    transition: all 0.2s; display: inline-block;
-  }
+  .btn-secondary { background: transparent; color: white; padding: 14px 30px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25); transition: all 0.2s; display: inline-block; }
   .btn-secondary:hover { border-color: white; }
 
-  .hero-right {
-    background: var(--light);
-    padding: 80px 60px;
-    display: flex; flex-direction: column; justify-content: center;
-  }
-  .hero-stats {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-    margin-bottom: 40px;
-  }
-  .stat-card {
-    background: white; border: 1px solid var(--border);
-    border-radius: 12px; padding: 28px 24px;
+  .hero-right { background: var(--light); padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
+  .hero-benefits { display: flex; flex-direction: column; gap: 20px; margin-bottom: 32px; }
+  .benefit-card {
+    background: white; border: 1px solid var(--border); border-left: 4px solid var(--accent);
+    border-radius: 10px; padding: 22px 24px; display: flex; align-items: flex-start; gap: 16px;
     transition: box-shadow 0.2s;
   }
-  .stat-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
-  .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem; font-weight: 900;
-    color: var(--accent); line-height: 1;
-    margin-bottom: 6px;
-  }
-  .stat-label { font-size: 0.875rem; color: var(--muted); line-height: 1.4; }
-  .hero-trust {
-    background: white; border: 1px solid var(--border);
-    border-radius: 12px; padding: 20px 24px;
-    display: flex; align-items: center; gap: 16px;
-  }
-  .trust-icon {
-    width: 44px; height: 44px; background: rgba(15,118,110,0.1);
-    border-radius: 10px; display: flex; align-items: center; justify-content: center;
-    font-size: 1.3rem; flex-shrink: 0;
-  }
+  .benefit-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.07); }
+  .benefit-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+  .benefit-text h4 { font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .benefit-text p { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
+  .hero-trust { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; }
+  .trust-icon { width: 44px; height: 44px; background: rgba(15,118,110,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
   .trust-text { font-size: 0.9rem; color: var(--slate); line-height: 1.5; }
   .trust-text strong { color: var(--ink); display: block; margin-bottom: 2px; }
 
-  /* SECTION BASE */
+  /* SECTIONS */
   section { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
-  .section-tag {
-    font-size: 0.75rem; font-weight: 600;
-    letter-spacing: 2px; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 12px;
-  }
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    font-weight: 700; line-height: 1.2;
-    color: var(--ink); margin-bottom: 16px;
-  }
-  .section-sub {
-    font-size: 1.05rem; color: var(--muted);
-    line-height: 1.7; max-width: 580px;
-    margin-bottom: 48px;
-  }
+  .section-tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; line-height: 1.2; color: var(--ink); margin-bottom: 16px; }
+  .section-sub { font-size: 1.05rem; color: var(--muted); line-height: 1.7; max-width: 580px; margin-bottom: 48px; }
 
   /* PROBLEMA */
   .problema-wrap { background: #FEF9F0; }
   .problema-inner { max-width: 1200px; margin: 0 auto; padding: 80px 40px; }
   .problema-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
-  .problema-card {
-    background: white; border: 1px solid #FCD34D;
-    border-left: 4px solid var(--gold);
-    border-radius: 8px; padding: 28px 24px;
-  }
+  .problema-card { background: white; border: 1px solid #FCD34D; border-left: 4px solid var(--gold); border-radius: 8px; padding: 28px 24px; }
   .problema-card h4 { font-size: 1rem; font-weight: 600; margin-bottom: 10px; color: var(--ink); }
   .problema-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
 
+  /* PARA QUIEN */
+  .paraquien-wrap { background: #F0FDF9; }
+  .paraquien-inner { max-width: 1200px; margin: 0 auto; padding: 80px 40px; }
+  .paraquien-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-top: 48px; }
+  .paraquien-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 28px 22px; text-align: center; transition: all 0.2s; }
+  .paraquien-card:hover { border-color: var(--accent); box-shadow: 0 8px 24px rgba(15,118,110,0.1); transform: translateY(-2px); }
+  .paraquien-emoji { font-size: 2.2rem; margin-bottom: 14px; }
+  .paraquien-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .paraquien-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.5; }
+
   /* SERVICIOS */
   .servicios-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
-  .servicio-card {
-    border: 1px solid var(--border); border-radius: 12px;
-    padding: 36px 32px; position: relative; overflow: hidden;
-    transition: all 0.25s; cursor: default;
-  }
-  .servicio-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 4px;
-    background: linear-gradient(90deg, var(--accent), #0D9488);
-  }
+  .servicio-card { border: 1px solid var(--border); border-radius: 12px; padding: 36px 32px; position: relative; overflow: hidden; transition: all 0.25s; }
+  .servicio-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--accent), #0D9488); }
   .servicio-card:hover { border-color: var(--accent); box-shadow: 0 12px 32px rgba(15,118,110,0.1); transform: translateY(-2px); }
   .servicio-icon { font-size: 2rem; margin-bottom: 18px; }
   .servicio-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; color: var(--ink); }
   .servicio-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
   .servicio-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .tag {
-    background: rgba(15,118,110,0.08); color: var(--accent);
-    font-size: 0.75rem; font-weight: 500;
-    padding: 4px 10px; border-radius: 4px;
-  }
+  .tag { background: rgba(15,118,110,0.08); color: var(--accent); font-size: 0.75rem; font-weight: 500; padding: 4px 10px; border-radius: 4px; }
 
   /* POR QUE YO */
   .porque-wrap { background: var(--ink); }
@@ -212,88 +120,38 @@
   .porque-inner .section-sub { color: #9CA3AF; }
   .porque-inner .section-tag { color: #5EEAD4; }
   .porque-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-  .porque-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px; padding: 32px 28px;
-    transition: background 0.2s;
-  }
+  .porque-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 32px 28px; transition: background 0.2s; }
   .porque-card:hover { background: rgba(255,255,255,0.08); }
-  .porque-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem; font-weight: 900;
-    color: rgba(94,234,212,0.3); line-height: 1;
-    margin-bottom: 16px;
-  }
+  .porque-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: rgba(94,234,212,0.3); line-height: 1; margin-bottom: 16px; }
   .porque-card h4 { font-size: 1rem; font-weight: 600; color: white; margin-bottom: 10px; }
   .porque-card p { font-size: 0.875rem; color: #9CA3AF; line-height: 1.6; }
 
   /* PROCESO */
   .proceso-steps { display: flex; flex-direction: column; gap: 0; position: relative; }
-  .proceso-steps::before {
-    content: '';
-    position: absolute; left: 22px; top: 24px; bottom: 24px;
-    width: 2px; background: var(--border);
-  }
-  .paso {
-    display: flex; gap: 28px; padding: 24px 0;
-    position: relative;
-  }
-  .paso-num {
-    width: 46px; height: 46px; border-radius: 50%;
-    background: var(--accent); color: white;
-    font-weight: 700; font-size: 1rem;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0; position: relative; z-index: 1;
-  }
+  .proceso-steps::before { content: ''; position: absolute; left: 22px; top: 24px; bottom: 24px; width: 2px; background: var(--border); }
+  .paso { display: flex; gap: 28px; padding: 24px 0; position: relative; }
+  .paso-num { width: 46px; height: 46px; border-radius: 50%; background: var(--accent); color: white; font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1; }
   .paso-content { padding-top: 8px; }
   .paso-content h4 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
   .paso-content p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
 
-  /* CTA FINAL */
-  .cta-wrap {
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
-  }
-  .cta-inner {
-    max-width: 1200px; margin: 0 auto; padding: 80px 40px;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
-  }
-  .cta-inner h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 900; color: white; line-height: 1.2; margin-bottom: 20px;
-  }
+  /* CTA */
+  .cta-wrap { background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%); }
+  .cta-inner { max-width: 1200px; margin: 0 auto; padding: 80px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .cta-inner h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 900; color: white; line-height: 1.2; margin-bottom: 20px; }
   .cta-inner p { font-size: 1.05rem; color: rgba(255,255,255,0.8); line-height: 1.7; }
-  .cta-card {
-    background: white; border-radius: 16px;
-    padding: 40px 36px;
-  }
+  .cta-card { background: white; border-radius: 16px; padding: 40px 36px; }
   .cta-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
   .cta-card p { font-size: 0.9rem; color: var(--muted); margin-bottom: 28px; line-height: 1.5; }
   .cta-form { display: flex; flex-direction: column; gap: 14px; }
-  .cta-form input, .cta-form textarea {
-    border: 1px solid var(--border); border-radius: 8px;
-    padding: 12px 16px; font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem; color: var(--ink); outline: none;
-    transition: border-color 0.2s; background: var(--light);
-  }
+  .cta-form input, .cta-form textarea { border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ink); outline: none; transition: border-color 0.2s; background: var(--light); }
   .cta-form input:focus, .cta-form textarea:focus { border-color: var(--accent); background: white; }
   .cta-form textarea { height: 90px; resize: none; }
-  .cta-form button {
-    background: var(--accent); color: white;
-    padding: 14px; border: none; border-radius: 8px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600; font-size: 0.95rem;
-    cursor: pointer; transition: background 0.2s;
-  }
+  .cta-form button { background: var(--accent); color: white; padding: 14px; border: none; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: background 0.2s; }
   .cta-form button:hover { background: var(--accent2); }
 
   /* FOOTER */
-  footer {
-    background: #0F172A; padding: 32px 40px;
-    display: flex; justify-content: space-between; align-items: center;
-    flex-wrap: wrap; gap: 16px;
-  }
+  footer { background: #0F172A; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
   footer p { font-size: 0.85rem; color: #6B7280; }
   .footer-links { display: flex; gap: 24px; }
   .footer-links a { font-size: 0.85rem; color: #6B7280; text-decoration: none; transition: color 0.2s; }
@@ -302,31 +160,20 @@
   /* RESPONSIVE */
   @media (max-width: 768px) {
     .hero { grid-template-columns: 1fr; }
-    .hero-left { padding: 60px 28px; }
-    .hero-right { padding: 40px 28px; }
-    .hero-stats { grid-template-columns: 1fr 1fr; }
-    .problema-grid { grid-template-columns: 1fr; }
-    .servicios-grid { grid-template-columns: 1fr; }
-    .porque-grid { grid-template-columns: 1fr; }
+    .hero-left, .hero-right { padding: 60px 28px; }
+    .problema-grid, .porque-grid, .servicios-grid { grid-template-columns: 1fr; }
+    .paraquien-grid { grid-template-columns: 1fr 1fr; }
     .cta-inner { grid-template-columns: 1fr; }
     nav { padding: 14px 20px; }
     .nav-links { display: none; }
     section { padding: 60px 20px; }
   }
 
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
   .hero-tag { animation: fadeUp 0.5s ease both; }
   .hero-title { animation: fadeUp 0.5s 0.1s ease both; }
   .hero-subtitle { animation: fadeUp 0.5s 0.2s ease both; }
   .hero-btns { animation: fadeUp 0.5s 0.3s ease both; }
-  .stat-card:nth-child(1) { animation: fadeUp 0.5s 0.2s ease both; }
-  .stat-card:nth-child(2) { animation: fadeUp 0.5s 0.3s ease both; }
-  .stat-card:nth-child(3) { animation: fadeUp 0.5s 0.4s ease both; }
-  .stat-card:nth-child(4) { animation: fadeUp 0.5s 0.5s ease both; }
 </style>
 </head>
 <body>
@@ -335,6 +182,7 @@
 <nav>
   <div class="nav-brand">Ing. Marcela Valverde</div>
   <ul class="nav-links">
+    <li><a href="#para-quien">¿Para quién?</a></li>
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#proceso">Cómo trabajo</a></li>
     <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -347,12 +195,12 @@
   <div class="hero-left">
     <span class="hero-tag">Consultora Independiente · Córdoba, Argentina</span>
     <h1 class="hero-title">
-      Potencia tu crecimiento<br>
-      con <span>tecnología</span>,<br>
-      que multiplica resultados.
+      La tecnología puede<br>
+      hacer el trabajo<br>
+      <span>repetitivo por vos.</span>
     </h1>
     <p class="hero-subtitle">
-      Ayudo a <strong>PYMEs y negocios</strong> a dejar de perder tiempo en tareas manuales, a tomar mejores decisiones con sus datos y a garantizar que sus sistemas funcionen sin errores. <strong>+ 20 años de experiencia real</strong>, ahora a tu disposición.
+      Ayudo a <strong>emprendedores, comercios y pequeños negocios</strong> a usar herramientas de automatización e IA para ganar tiempo, ordenar sus procesos y crecer sin complicarse. <strong>Sin tecnicismos, sin proyectos enormes.</strong> Empezamos por lo que más te duele hoy.
     </p>
     <div class="hero-btns">
       <a href="#contacto" class="btn-primary">Quiero una consulta gratuita</a>
@@ -360,29 +208,34 @@
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-stats">
-      <div class="stat-card">
-        <div class="stat-num">20+</div>
-        <div class="stat-label">años en proyectos tecnológicos de alta complejidad</div>
+    <div class="hero-benefits">
+      <div class="benefit-card">
+        <div class="benefit-icon">⏱️</div>
+        <div class="benefit-text">
+          <h4>Recuperás tiempo en tu día a día</h4>
+          <p>Automatizamos las tareas que hacés a mano y podrían hacerse solas: respuestas, agendas, reportes, recordatorios y más.</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <div class="stat-num">80%</div>
-        <div class="stat-label">de reducción de errores lograda en procesos automatizados</div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💬</div>
+        <div class="benefit-text">
+          <h4>Te explico todo sin jerga técnica</h4>
+          <p>Tengo formación técnica pero hablo en el idioma del negocio. No necesitás saber de tecnología para trabajar conmigo.</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <div class="stat-num">+30%</div>
-        <div class="stat-label">de expansión en canales digitales generada en el sector financiero</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">0</div>
-        <div class="stat-label">interrupciones en migraciones críticas bajo mi supervisión de QA</div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🌱</div>
+        <div class="benefit-text">
+          <h4>Empezamos pequeño, crecemos juntos</h4>
+          <p>No hace falta un gran proyecto ni una gran inversión. Arrancamos por el problema que más te molesta hoy y avanzamos desde ahí.</p>
+        </div>
       </div>
     </div>
     <div class="hero-trust">
-      <div class="trust-icon">🏦</div>
+      <div class="trust-icon">🎓</div>
       <div class="trust-text">
-        <strong>Experiencia validada en entorno financiero</strong>
-        Sector bancario · + 20 años · Sistemas críticos de alta disponibilidad
+        <strong>Formación técnica sólida + herramientas actuales de IA</strong>
+        Ing. en Sistemas · Técnico en IA y Ciencia de Datos · +20 años en tecnología
       </div>
     </div>
   </div>
@@ -392,19 +245,50 @@
 <div class="problema-wrap">
   <div class="problema-inner">
     <div class="section-tag">¿Te suena familiar?</div>
-    <h2 class="section-title" style="color:var(--ink)">Estos son los problemas<br>que más escucho en las PYMEs</h2>
+    <h2 class="section-title" style="color:var(--ink)">Lo que más escucho de<br>emprendedores y pequeños negocios</h2>
     <div class="problema-grid">
       <div class="problema-card">
-        <h4>⏱ "Perdemos horas en tareas que se podrían hacer solas"</h4>
-        <p>Cargas manuales, reportes que se arman a mano, procesos repetitivos que consumen tiempo valioso de tu equipo todos los días.</p>
+        <h4>⏱ "Paso horas haciendo cosas que se podrían automatizar"</h4>
+        <p>Responder siempre lo mismo por WhatsApp, cargar datos a mano, armar reportes manualmente. Tiempo que podrías invertir en lo que realmente hace crecer tu negocio.</p>
       </div>
       <div class="problema-card">
-        <h4>😓 "Lanzamos funcionalidades y siempre aparecen errores"</h4>
-        <p>Sin un proceso de QA claro, los errores llegan a producción, generan mala experiencia al cliente y costos de corrección evitables.</p>
+        <h4>🤯 "Escucho hablar de IA pero no sé por dónde empezar"</h4>
+        <p>La tecnología avanza rapidísimo y da la sensación de que te quedás atrás. No sabés qué herramientas usar ni si son para tu tipo de negocio o presupuesto.</p>
       </div>
       <div class="problema-card">
-        <h4>📊 "Tenemos datos pero no sabemos qué hacer con ellos"</h4>
-        <p>La información existe, pero está dispersa, sin validar o en formatos que no permiten tomar decisiones concretas y a tiempo.</p>
+        <h4>📋 "Todo depende de que yo esté presente para que funcione"</h4>
+        <p>Los procesos de tu negocio están en tu cabeza. Si te ausentás, todo se frena. Necesitás ordenar y sistematizar para poder delegar y crecer con tranquilidad.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PARA QUIEN -->
+<div class="paraquien-wrap" id="para-quien">
+  <div class="paraquien-inner">
+    <div class="section-tag">¿Esto es para mí?</div>
+    <h2 class="section-title" style="color:var(--ink)">Trabajo con personas que<br>quieren crecer sin complicarse</h2>
+    <p class="section-sub" style="margin-bottom:0">Si te reconocés en alguno de estos perfiles, podemos hacer algo juntos.</p>
+    <div class="paraquien-grid">
+      <div class="paraquien-card">
+        <div class="paraquien-emoji">🏪</div>
+        <h4>Comerciantes y tiendas</h4>
+        <p>Que quieren automatizar pedidos, respuestas, stock o turnos sin contratar a un desarrollador.</p>
+      </div>
+      <div class="paraquien-card">
+        <div class="paraquien-emoji">💼</div>
+        <h4>Profesionales independientes</h4>
+        <p>Abogados, contadores, coaches, médicos que pierden tiempo valioso en administración y comunicaciones.</p>
+      </div>
+      <div class="paraquien-card">
+        <div class="paraquien-emoji">🌱</div>
+        <h4>Emprendedores en crecimiento</h4>
+        <p>Que ya tienen clientes pero sus procesos todavía dependen de que ellos estén presentes para que todo funcione.</p>
+      </div>
+      <div class="paraquien-card">
+        <div class="paraquien-emoji">🏢</div>
+        <h4>Pequeñas empresas y PYMEs</h4>
+        <p>Que quieren incorporar tecnología de forma ordenada, sin grandes inversiones ni riesgos innecesarios.</p>
       </div>
     </div>
   </div>
@@ -413,41 +297,56 @@
 <!-- SERVICIOS -->
 <section id="servicios">
   <div class="section-tag">Lo que hago</div>
-  <h2 class="section-title">Servicios diseñados para<br>que tu negocio escale sin caos</h2>
-  <p class="section-sub">Trabajo con vos desde el diagnóstico hasta la implementación. Sin tecnicismos innecesarios, con resultados concretos.</p>
+  <h2 class="section-title">Servicios concretos para<br>negocios reales</h2>
+  <p class="section-sub">Sin proyectos eternos ni presupuestos enormes. Empezamos por donde más te duele y avanzamos paso a paso.</p>
   <div class="servicios-grid">
+
     <div class="servicio-card">
       <div class="servicio-icon">⚙️</div>
-      <h3>Automatización de Procesos con IA</h3>
-      <p>Identifico los procesos repetitivos de tu negocio y los convierto en flujos automatizados que trabajan solos. Desde el agendamiento de citas hasta el envío de reportes, presupuestos o notificaciones. Usando herramientas como n8n, Power Automate e integraciones con IA.</p>
+      <h3>Automatización de tareas con IA</h3>
+      <p>¿Respondés siempre lo mismo? ¿Cargás datos a mano? ¿Mandás recordatorios uno por uno? Identificamos esas tareas repetitivas y las automatizamos para que trabajen solas, mientras vos te dedicás a lo que realmente importa en tu negocio.</p>
       <div class="servicio-tags">
-        <span class="tag">n8n</span><span class="tag">Power Automate</span><span class="tag">IA Generativa</span><span class="tag">Integraciones API</span>
+        <span class="tag">Respuestas automáticas</span>
+        <span class="tag">Agendamiento de turnos</span>
+        <span class="tag">Notificaciones</span>
+        <span class="tag">Reportes automáticos</span>
       </div>
     </div>
+
     <div class="servicio-card">
-      <div class="servicio-icon">🔍</div>
-      <h3>Análisis Funcional & Relevamiento</h3>
-      <p>Traduzco lo que tu negocio necesita en especificaciones claras para los equipos técnicos. Relevamiento de procesos, documentación AS-IS / TO-BE, historias de usuario y criterios de aceptación. Para que el desarrollo llegue a donde tiene que llegar, sin idas y vueltas.</p>
+      <div class="servicio-icon">🗺️</div>
+      <h3>Diagnóstico y orden de procesos</h3>
+      <p>Si tu negocio funciona porque vos estás presente, es momento de documentar y ordenar. Mapeamos cómo trabajás hoy, detectamos qué se puede simplificar y armamos un plan concreto para que puedas crecer sin que todo dependa de vos.</p>
       <div class="servicio-tags">
-        <span class="tag">Historias de Usuario</span><span class="tag">AS-IS / TO-BE</span><span class="tag">Backlog</span><span class="tag">Casos de Uso</span>
+        <span class="tag">Mapeo de procesos</span>
+        <span class="tag">Detección de cuellos de botella</span>
+        <span class="tag">Plan de mejora</span>
       </div>
     </div>
+
     <div class="servicio-card">
-      <div class="servicio-icon">✅</div>
-      <h3>QA & Testing Profesional</h3>
-      <p>Diseño y ejecuto planes de prueba completos antes de que tu producto llegue al usuario. Pruebas funcionales, de regresión, integración y validación de APIs. Porque detectar un error antes de salir a producción es infinitamente más barato que corregirlo después.</p>
+      <div class="servicio-icon">📊</div>
+      <h3>Orden y análisis de tu información</h3>
+      <p>¿Tenés datos dispersos en planillas que no te dicen nada útil? Te ayudo a ordenar y visualizar la información de tu negocio de forma simple para que puedas tomar decisiones con claridad, no con intuición o suposiciones.</p>
       <div class="servicio-tags">
-        <span class="tag">UAT</span><span class="tag">Testing de APIs</span><span class="tag">Postman</span><span class="tag">Regresión</span>
+        <span class="tag">Planillas inteligentes</span>
+        <span class="tag">Reportes simples</span>
+        <span class="tag">Visualización de datos</span>
+        <span class="tag">Limpieza de información</span>
       </div>
     </div>
+
     <div class="servicio-card">
-      <div class="servicio-icon">📈</div>
-      <h3>Datos, SQL & Gobierno de Información</h3>
-      <p>Analizo, valido y ordeno los datos de tu negocio para que puedas confiar en ellos y usarlos para tomar decisiones. Consultas SQL avanzadas, reportes gerenciales, validación de integridad y migraciones. Tus datos, bajo control.</p>
+      <div class="servicio-icon">🤝</div>
+      <h3>Acompañamiento tecnológico continuo</h3>
+      <p>A veces no necesitás un proyecto grande, sino alguien de confianza a quien consultarle cuando aparece un problema, una herramienta nueva o una decisión tecnológica que no sabés cómo encarar. Estoy para eso también.</p>
       <div class="servicio-tags">
-        <span class="tag">SQL Server</span><span class="tag">Azure SQL</span><span class="tag">Python</span><span class="tag">Reportes analíticos</span>
+        <span class="tag">Consultas puntuales</span>
+        <span class="tag">Evaluación de herramientas</span>
+        <span class="tag">Soporte y seguimiento</span>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -455,38 +354,38 @@
 <div class="porque-wrap" id="sobre-mi">
   <div class="porque-inner">
     <div class="section-tag">Por qué elegirme</div>
-    <h2 class="section-title">No soy solo una consultora.<br>Soy una profesional con experiencia real.</h2>
-    <p class="section-sub">Mis credenciales no están en un paper. Están en + 20 años de sistemas que funcionan, procesos que se simplificaron y equipos que encontraron claridad donde antes había confusión.</p>
+    <h2 class="section-title">Tecnología con criterio,<br>explicada en tu idioma.</h2>
+    <p class="section-sub">Combino más de 20 años de experiencia en tecnología con formación actualizada en IA. Pero sobre todo, entiendo que lo que necesitás es claridad y resultados concretos, no complejidad.</p>
     <div class="porque-grid">
       <div class="porque-card">
         <div class="porque-num">01</div>
-        <h4>Experiencia en sistemas críticos reales</h4>
-        <p>Trabajé con la integración con nuevo core bancario de una institución financiera de primer nivel. Sistemas donde el error no es una opción.</p>
+        <h4>Formación técnica real y actualizada</h4>
+        <p>Ingeniera en Sistemas con más de 20 años trabajando en tecnología, más formación reciente en Ciencia de Datos e Inteligencia Artificial. Entiendo lo que hago y puedo explicártelo sin abrumarte.</p>
       </div>
       <div class="porque-card">
         <div class="porque-num">02</div>
-        <h4>Hablo tu idioma, no el del manual</h4>
-        <p>Actué siempre como nexo entre el área de negocio y los técnicos. Sé explicar tecnología sin tecnicismos y entender necesidades de negocio sin que me las traduzcan.</p>
+        <h4>Hablo el idioma del negocio, no del manual</h4>
+        <p>Siempre trabajé como puente entre lo técnico y lo humano. Sé escuchar lo que necesitás y encontrar soluciones que tengan sentido para tu realidad, sin complicaciones innecesarias.</p>
       </div>
       <div class="porque-card">
         <div class="porque-num">03</div>
-        <h4>Formación en IA y Ciencia de Datos actualizada</h4>
-        <p>Técnico en Ciencias de Datos e IA y Diplomada en IA. Combino la solidez de la experiencia con las herramientas más actuales del mercado.</p>
+        <h4>Empezamos por lo que más te duele hoy</h4>
+        <p>No te propongo un proyecto enorme desde el día uno. Arrancamos por el problema más urgente, vemos resultados rápido y desde ahí decidimos juntos cómo seguir avanzando.</p>
       </div>
       <div class="porque-card">
         <div class="porque-num">04</div>
-        <h4>Resultados medibles, no promesas</h4>
-        <p>80% de reducción en errores manuales. 30% de expansión en canales digitales. Migraciones sin interrupciones. Eso es lo que busco generar en cada proyecto.</p>
+        <h4>Te enseño mientras trabajamos</h4>
+        <p>El objetivo no es que dependas de mí para siempre. Quiero que entiendas las herramientas que usamos y puedas operarlas con autonomía cuando terminemos cada etapa.</p>
       </div>
       <div class="porque-card">
         <div class="porque-num">05</div>
-        <h4>Metodología ágil y foco en entrega</h4>
-        <p>Trabajo con Scrum y metodologías ágiles. Sin proyectos eternos. Con entregas iterativas que te permiten ver avances reales desde las primeras semanas.</p>
+        <h4>Soluciones a medida, no paquetes genéricos</h4>
+        <p>Cada negocio es distinto. No tengo una solución enlatada para todos. Escucho tu situación particular y propongo algo que realmente tenga sentido para vos y tu contexto.</p>
       </div>
       <div class="porque-card">
         <div class="porque-num">06</div>
-<h4>Tu socia tecnológica, no solo una proveedora</h4>
-<p>Entiendo que emprender es desafiante. Por eso no te doy solo una solución técnica — te acompaño, te explico y crecemos juntos. Tu éxito es mi mejor carta de presentación.</p>
+        <h4>Tu socia tecnológica, no solo una proveedora</h4>
+        <p>Entiendo que emprender es desafiante. Por eso no te doy solo una solución técnica — te acompaño, te explico y crecemos juntos. Tu éxito es mi mejor carta de presentación.</p>
       </div>
     </div>
   </div>
@@ -495,36 +394,36 @@
 <!-- PROCESO -->
 <section id="proceso">
   <div class="section-tag">Cómo trabajo</div>
-  <h2 class="section-title">Un proceso simple,<br>pensado para no complicarte la vida</h2>
-  <p class="section-sub">Sin metodologías complicadas ni reuniones eternas. Un camino claro de cuatro pasos para que empieces a ver resultados rápido.</p>
+  <h2 class="section-title">Simple, claro y<br>sin sorpresas en el camino</h2>
+  <p class="section-sub">Cuatro pasos para que sepas exactamente qué esperar desde el primer contacto hasta la entrega.</p>
   <div style="max-width: 560px;">
     <div class="proceso-steps">
       <div class="paso">
         <div class="paso-num">1</div>
         <div class="paso-content">
-          <h4>Diagnóstico gratuito</h4>
-          <p>Una reunión de 45 minutos donde entiendo tu negocio, tus procesos y dónde está el mayor potencial de mejora. Sin costo y sin compromiso.</p>
+          <h4>Charla de diagnóstico gratuita</h4>
+          <p>Nos juntamos 45 minutos (por Meet o presencial en Córdoba). Me contás cómo funciona tu negocio y qué te genera más fricción. Sin costo y sin compromiso.</p>
         </div>
       </div>
       <div class="paso">
         <div class="paso-num">2</div>
         <div class="paso-content">
-          <h4>Propuesta a medida</h4>
-          <p>Te presento un plan concreto: qué vamos a hacer, en cuánto tiempo, con qué herramientas y cuánto va a costar. Sin letras chicas.</p>
+          <h4>Propuesta clara y a medida</h4>
+          <p>Te presento qué podemos hacer, cómo, en cuánto tiempo y cuánto cuesta. Sin letra chica ni sorpresas. Vos decidís si seguimos adelante.</p>
         </div>
       </div>
       <div class="paso">
         <div class="paso-num">3</div>
         <div class="paso-content">
-          <h4>Implementación iterativa</h4>
-          <p>Trabajo en ciclos cortos con entregas visibles. Vos ves el avance, das feedback y el proyecto evoluciona con vos, no sin vos.</p>
+          <h4>Implementación paso a paso</h4>
+          <p>Trabajamos en etapas cortas con avances visibles. Vos ves los resultados desde el principio y podés dar feedback en cada momento.</p>
         </div>
       </div>
       <div class="paso">
         <div class="paso-num">4</div>
         <div class="paso-content">
-          <h4>Cierre y transferencia</h4>
-          <p>Cuando terminamos, te entrego todo documentado y te capacito para que puedas operar de forma autónoma. El objetivo es que no me necesites para siempre.</p>
+          <h4>Entrega, documentación y capacitación</h4>
+          <p>Cuando terminamos, te explico todo lo que hicimos y te dejo los recursos para que puedas manejarlo solo. El objetivo es que ganes autonomía, no dependencia.</p>
         </div>
       </div>
     </div>
@@ -535,8 +434,8 @@
 <div class="cta-wrap" id="contacto">
   <div class="cta-inner">
     <div>
-      <h2>¿Listo para dejar de perder tiempo en lo que se puede automatizar?</h2>
-      <p>La primera consulta es gratuita. En 45 minutos identificamos juntos cuál es el cambio que más impacto puede tener en tu negocio hoy.</p>
+      <h2>¿Cuál es la tarea que más tiempo te roba hoy?</h2>
+      <p>Escribime y lo vemos juntos. La primera charla es gratuita y sin compromiso. En 45 minutos identificamos si hay algo concreto que podamos mejorar en tu negocio.</p>
     </div>
     <div class="cta-card">
       <h3>Reservá tu consulta gratuita</h3>
@@ -544,8 +443,8 @@
       <div class="cta-form">
         <input type="text" placeholder="Tu nombre">
         <input type="email" placeholder="Tu email">
-        <input type="text" placeholder="Tu negocio o empresa">
-        <textarea placeholder="¿Cuál es el mayor dolor de cabeza en tus procesos hoy?"></textarea>
+        <input type="text" placeholder="¿A qué te dedicás?">
+        <textarea placeholder="¿Qué tarea o proceso te gustaría mejorar o automatizar?"></textarea>
         <button type="button">Quiero mi consulta gratuita →</button>
       </div>
     </div>
@@ -554,7 +453,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Ing. Marcela Valverde · Consultora en Automatización & Análisis · Córdoba, Argentina</p>
+  <p>© 2026 Ing. Marcela Valverde · MVImpulsa · Córdoba, Argentina</p>
   <div class="footer-links">
     <a href="mailto:contacto.mvimpulsa@gmail.com">contacto.mvimpulsa@gmail.com</a>
     <a href="https://linkedin.com/in/marcela-valverde-estrada" target="_blank">LinkedIn</a>
