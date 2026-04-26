@@ -175,6 +175,7 @@
   .hero-subtitle { animation: fadeUp 0.5s 0.2s ease both; }
   .hero-btns { animation: fadeUp 0.5s 0.3s ease both; }
 </style>
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -460,6 +461,11 @@
     <a href="tel:+5435155806670">+54 351 5580667</a>
   </div>
 </footer>
-
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    createChat({
+      webhookUrl: 'https://automv.app.n8n.cloud/webhook/b1154aa8-5408-4f8a-a03e-f7c78b94a27b/chat'
+    });
+  </script>
 </body>
 </html>
